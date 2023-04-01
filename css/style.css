@@ -1,26 +1,22 @@
-@font-face {
-    font-family: 'Flame-Regular';
-    src: url('/fonts/FlameRegular.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Flame-Sans';
-    src: url('/fonts/FlameSans.otf') format('opentype');
-}
+@import url('https://fonts.cdnfonts.com/css/flame-3');
 
 body {
     margin: 0% auto;
-    font-family: 'Flame-Regular', Helvetica, sans-serif;
+    font-family: 'Flame';
     background-image: rgb(245, 235, 220);
 }
 
 h1, p, a{
-    font-family: 'Flame-Regular', Helvetica, sans-serif;
+    font-family: 'Flame';
     color: #502314;
 }
 
 .navbar {
     transition: top 0.3s;
+}
+
+.logo-bk {
+    width: 82px;
 }
 
 .navbar li {
@@ -30,14 +26,15 @@ h1, p, a{
 .navbar a, .navbar a:hover {
     color: #502314;
     font-size: 1.4rem;
+    font-weight: 700;
 }
 
-#banner-1 {
+#banner {
     opacity: 1;
     position: relative;
 }
 
-#banner-1-responsive {
+#banner-responsive {
     opacity: 0;
     object-fit: cover;
     position: absolute;
@@ -45,21 +42,70 @@ h1, p, a{
 }
 
 .btn-carousel {
-    font-family: 'Flame-Regular', Helvetica, sans-serif;
+    margin: 0% auto;
+    font-family: 'Flame';
+    font-weight: 600;
     min-width: 300px;
     font-size: 1.2rem;
     padding: 12px;
     border: none;
     border-radius: 10px;
+    display: block;
     background-color: #d42300;
-    font-weight: 200;
+}
+
+.carousel-secondary {
+    display: block;
+}
+
+.carousel-mobile {
+    display: none;
+}
+
+#titulo-restaurante {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+#subtitulo-restaurante {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+#desc-restaurante {
+    font-family: 'Flame';
+    font-weight: lighter;
+    width: 25%; 
+    line-height: 1;
+}
+
+.image-phone, .conteudo-phone {
+    width: 50%;
+}
+
+.image-phone img{
+    width: 70%;
+}
+
+.text-phone {
+    font-size: 5em;
+    line-height: 1;
+    color: white;
+    padding-top: 50px;
+    padding-right: 100px;
+}
+
+.botao-download img {
+    width: 250px;
+    padding: 0% 1%;
+    display: inline-block;
 }
 
 .input-group {
-    font-family: 'Flame-Regular', Helvetica, sans-serif;
+    font-family: 'Flame';
     border: 1px solid #5c5c5c;
     border-radius: 8px;
-    width: 100%;
+    min-width: 350px;
     height: 50px;
     color: #c1b7b3;
     text-align: center;
@@ -77,6 +123,7 @@ h1, p, a{
     display: inline-block;
     margin: 0% 0.5% 0% 0.5%;
     font-size: 1.3rem;
+    font-weight: 600;
     color: rgb(245, 235, 220);
 }
 
@@ -85,7 +132,7 @@ h1, p, a{
 }
 
 .footer-1 {
-    width: 70%;
+    width: 80%;
     margin: 0% auto;
     border-bottom: 1px solid rgb(245, 235, 220);
 }
@@ -95,7 +142,7 @@ h1, p, a{
 }
 
 .footer-subtitle a {
-    font-family: 'Flame-Sans', Helvetica, sans-serif;
+    font-family: 'Flame';
     font-size: 1rem;
 }
 
@@ -104,18 +151,130 @@ h1, p, a{
     margin: 0% auto;
 }
 
+.detal-text {
+    padding-bottom: 10%;
+}
+
+.credits {
+    padding-bottom: 10%;
+}
+
+.footer-mobile {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
-    #banner-1 {
+    #banner {
         opacity: 0;
         position: absolute;
     }
 
-    #banner-1-responsive {
+    #banner-responsive {
         opacity: 1;
         position: relative;
     }
     
+    #navbar {
+        padding-top: 20%;
+    }
+
     .logo-bk {
-        width: 72px;
+        width: 70px;
+        margin-top: 5%;
+    }
+
+    .carousel-topo {
+        padding-top: 10%;
+    }
+
+    .btn-carousel {
+        margin: 0% auto;
+        display: block;
+    }
+
+    .carousel-secondary {
+        display: none;
+    }
+
+    .carousel-mobile {
+        display: block;
+    }
+
+    .back-mobile {
+        padding: 10px;
+    }
+
+    #banner-mobile {
+        border-radius: 10px;
+    }
+
+    .button-mobile {
+        margin: 20px auto 50px;
+        display: block;
+    }
+
+    #container-restaurante {
+        width: 100%;
+    }
+
+    #titulo-restaurante {
+        font-size: 25px;
+    }
+
+    #desc-restaurante {
+        width: 100%;
+    }
+
+    .image-phone, .conteudo-phone {
+        width: 100%;
+    }
+
+    .image-phone img{
+        width: 170px;
+    }
+
+    .text-phone {
+        font-size: 26px;
+        width: 100%;
+        padding: 0px 0px 10px;
+        margin: 0%;
+    }
+
+    .botao-download img {
+        width: 100px;
+        padding: 0px 0px 10px;
+        display: block;
+    }
+
+    .footer-mobile {
+        display: block;
+    }
+
+    .footer-mobile li {
+        width: 100px;
+    }
+
+    .footer-mobile p {
+        margin: 0%;
+        font: normal 12px 'Flame';
+        color: rgba(80, 35, 20, .53333);
+    }
+
+    .logo-footer-mobile {
+        width: 30%;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 1000,
+            'GRAD' 0,
+            'opsz' 48;
+        color: rgba(80, 35, 20, .53333);
+        height: 24.5px;
+    }
+    
+    .detal-text {
+        padding-bottom: 20%;
     }
 }

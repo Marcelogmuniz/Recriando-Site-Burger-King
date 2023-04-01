@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.burgerking.com.br/images/bklogos/BK-novo-logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/scss">
-    <link rel="stylesheet" href="scss/main.css">
-    <link rel="stylesheet" href="scss/main.scss">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Links -->
+    <link rel="shortcut icon" href="https://www.burgerking.com.br/images/bklogos/BK-novo-logo.svg" type="image/x-icon"> <!-- Link do FavIcon -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Link do CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.1.min.js">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.1.min.js"> <!-- Link do jQuerry -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> <!-- Link do FontAwesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/> <!-- Link da font google -->
+    <!-- Fim dos links -->
     <title>Burger King®</title>
-    <script>
+    <!-- Código JavaScript para scroll do Navbar. -->
+    <script> 
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
@@ -23,16 +23,19 @@
             } else {
                 document.getElementById("navbar").style.top = "-200px";
             }
-        prevScrollpos = currentScrollPos;
+            prevScrollpos = currentScrollPos;
         }
     </script>
+    <!-- Fim do código JavaScript -->
 </head>
-<body>
+
+<body style="background: rgb(245, 235, 220);">
+    <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg d-block sticky-top" style="background-color: rgb(245, 235, 220);">
         <div class="container-fluid justify-content-between pt-2">
-            <img class="position-absolute pt-4" src="https://www.burgerking.com.br/images/bklogos/BK-novo-logo.svg" style="width: 82px;" alt="Logo">
+            <img class="position-absolute pt-4 logo-bk" src="https://www.burgerking.com.br/images/bklogos/BK-novo-logo.svg" alt="Logo"> <!--Logotipo-->
             <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-                <ul class="navbar-nav align-items-center text-center" >
+                <ul class="navbar-nav align-items-center text-center" > <!-- Lista não ordenada do navbar -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Início</a>
                     </li>
@@ -58,138 +61,225 @@
             </div>
         </div>
     </nav>
+    <!-- Fim Navbar -->
 
+    <!-- Conteúdo principal -->
     <main>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
+        <!-- Carrossel principal -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-topo" data-bs-ride="false">
+            <div class="carousel-indicators"> <!-- Indicadores -->
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active rounded-circle button-carousel" style="width: 10px; height: 10px;" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="rounded-circle button-carousel" style="width: 10px; height: 10px;" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="rounded-circle button-carousel" style="width: 10px; height: 10px;" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="rounded-circle button-carousel" style="width: 10px; height: 10px;" aria-label="Slide 4"></button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img id="banner-1" src="https://d3sn2rlrwxy0ce.cloudfront.net/Churras_1920x900_WEB.png?mtime=20221005101439&focal=none" class="w-100" alt="..." media="(min-width: 768px)">
-                    <img id="banner-1-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/BK_cheddar_original_750x1150_MOBILE.png?mtime=20220922143828&ampfocal=none" class="w-100" media="(max-width: 767px)">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Clique e Retire</button>
+            <div class="carousel-inner"> <!-- Divs img carrossel -->
+                <div class="carousel-item active"> <!-- Div imagem 1 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/Churras_1920x900_WEB.png?mtime=20221005101439&focal=none" class="w-100" alt="..." media="(min-width: 768px)"> <!-- imagem desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/Churras_750x1150_MOBILE.png?mtime=20221005101409&focal=none" class="w-100" media="(max-width: 767px)"> <!-- imagem mobile -->
+                    <div class="carousel-caption mx-auto"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel btn-principal text-light mb-4">Clique e Retire</button>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Bob_1920x900_WEB.png?mtime=20221005102600&focal=none" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Clique e Retire</button>
+                <div class="carousel-item"> <!-- Div imagem 2 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/Bob_1920x900_WEB.png?mtime=20221005102600&focal=none" class="d-block w-100" alt="..."> <!-- imagem desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/Bob_750x1150_MOBILE.png?mtime=20221005102527&focal=none" class="w-100" media="(max-width: 767px)"> <!-- imagem mobile -->
+                    <div class="carousel-caption mx-auto"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel btn-principal text-light mb-4">Clique e Retire</button>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Banner_2x1_setembro_1920x900_WEB.png?mtime=20221005101619&focal=none" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Ir para o Delivery</button>
+                <div class="carousel-item"> <!-- Div imagem 3 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/Banner_2x1_setembro_1920x900_WEB.png?mtime=20221005101619&focal=none" class="d-block w-100" alt="..."> <!-- imagem desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/Banner_2x1_setembro_750x1150_MOBILE.png?mtime=20221005101604&focal=none" class="w-100" media="(max-width: 767px)"> <!-- imagem mobile -->
+                    <div class="carousel-caption mx-auto"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel btn-principal text-light mb-4">Ir para o Delivery</button>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Banner_DLV_1920x900_WEB.png?mtime=20221005102725&focal=none" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Saiba mais</button>
+                <div class="carousel-item"> <!-- Div imagem 4 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/Banner_DLV_1920x900_WEB.png?mtime=20221005102725&focal=none" class="d-block w-100" alt="..."> <!-- imagem desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/Banner_DLV_750x1150_MOBILE.png?mtime=20221005102659&focal=none" class="w-100" media="(max-width: 767px)"> <!-- imagem mobile -->
+                    <div class="carousel-caption mx-auto"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel btn-principal text-light mb-4">Saiba mais</button>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"> <!-- Seta esquerda carrossel -->
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            </button>]
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <!-- Seta direita carrossel -->
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- Fim do carrossel principal -->
 
-        <div class="container-fluid justify-content-center align-items-center text-center pt-5" style="background-color: rgb(245, 235, 220);">
-            <p style="font-size: 2.95rem;">Restaurantes próximos a você</p>
-            <p style="font-size: 1.4rem;">Buscar por endereço</p>
-            <div class="input-group mb-3 mx-auto text-center" style="width: 50%;">
+        <!-- Div buscar restaurante -->
+        <div id="container-restaurante" class="container-fluid justify-content-center align-items-center text-center pt-5" style="background-color: rgb(245, 235, 220);">
+            <p id="titulo-restaurante">Restaurantes próximos a você</p> <!-- Título -->
+            <p id="subtitulo-restaurante">Buscar por endereço</p> <!-- Subtítulo -->
+            <div class="input-group mb-3 mx-auto text-center" style="width: 50%;"> <!-- Input -->
                 <input type="text" class="form-control text-center" style="border: none; font-size: 1.2rem; font-weight: 600;" placeholder="Digite aqui">
                 <span class="input-group-text bg-light" id="inputGroup-sizing-default" style="border: none;"><img src="https://www.burgerking.com.br/images/search.png" alt=""></span>
             </div>
-            <p style="font-size: 1.4rem;">ou</p>
-            <p style="font-size: 1.4rem;">Encontre o BK mais próximo de você</p>
-            <p class="text-center mx-auto" style="font-size: 0.9em; font-family: arial; width: 18%; font-weight: 300;">Preencha seu endereço no campo acima ou busque por 
+            <!-- Info -->
+            <p id="subtitulo-restaurante">ou</p> 
+            <p id="subtitulo-restaurante">Encontre o BK mais próximo de você</p>
+            <p id="desc-restaurante" class="text-center mx-auto">Preencha seu endereço no campo acima ou busque por 
             restaurantes próximos a você (lembre-se de ativar sua localização no
             navegador caso esteja desativada).</p>
-            <button type="button" class="btn-carousel text-light mb-4" style="width: 400px;">Buscar restaurantes próximos</button>
-
+            <!-- Fim info -->
+            <button type="button" class="btn-carousel text-light mb-4">Buscar restaurantes próximos</button> <!-- Botão buscar -->
         </div>
+        <!-- Fim da div buscar restaurante -->
 
-        <!-- phone -->
-
+        <!-- Div download app -->
         <div class="container-fluid d-flex justify-content-around pt-3" style="background-color: #d62300;">
-            <div class="image-phone text-center" style="width: 50%;">
-                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Mockup_HomeAppClubeBK.png?mtime=20211124095753&focal=none" alt="">
+            <div class="image-phone text-center"> <!-- Conteúdo esquerdo -->
+                <img src="https://d3sn2rlrwxy0ce.cloudfront.net/Mockup_HomeAppClubeBK.png?mtime=20211124095753&focal=none" alt=""> <!-- Img celular -->
             </div>
 
-            <div class="conteudo-phone text-start d-block" style="width: 50%; margin: 5% 5% 0% 10%;">
-                <div class="text-phone">
-                    <p style="font-size: 5rem; color: white; width: 68%; line-height: 1;">Baixe nosso App e tenha o BK na palma da sua mão!</p>
+            <div class="conteudo-phone text-start d-block"> <!-- Conteúdo direito -->
+                <div> <!-- Texto -->
+                    <p class="text-phone">Baixe nosso App e tenha o BK na palma da sua mão!</p>
                 </div>
-                <div class="botao-download d-inline-block pt-5">
-                    <img style="max-width: 270px; width: 100%;" src="https://d3sn2rlrwxy0ce.cloudfront.net/apple_2021-01-12-145551.png?mtime=20210112115552&focal=none" alt="">
-                    <img style="max-width: 270px; width: 100%;" src="https://d3sn2rlrwxy0ce.cloudfront.net/gplay_2021-01-12-145546.png?mtime=20210112115547&focal=none" alt="">
+                <div class="botao-download"> <!-- Botão img download AppStore e GooglePay -->
+                    <img  src="https://d3sn2rlrwxy0ce.cloudfront.net/apple_2021-01-12-145551.png?mtime=20210112115552&focal=none" alt="">
+                    <img  src="https://d3sn2rlrwxy0ce.cloudfront.net/gplay_2021-01-12-145546.png?mtime=20210112115547&focal=none" alt="">
                 </div>
             </div>
         </div>
+        <!-- Fim div download app -->
 
-        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+        <!-- Carrossel secundário versão desktop -->
+        <div id="carouselExampleIndicators" class="carousel slide carousel-secondary" data-bs-ride="carousel">
+            <div class="carousel-indicators"> <!-- Indicadores -->
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active rounded-circle" style="width: 10px; height: 10px;" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="rounded-circle" style="width: 10px; height: 10px;" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="rounded-circle" style="width: 10px; height: 10px;" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="rounded-circle" style="width: 10px; height: 10px;" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active"> <!-- Div imagem 1 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/carne-banner-cardapio2-d.jpg?mtime=20210226103612&focal=none" class="w-100" alt="..." media="(min-width: 768px)"> <!-- Imagem versão desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/carne-banner-cardapio2-m.jpg?mtime=20210226103619&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem versão mobile -->
+                    <div class="carousel-caption d-none d-md-block"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel text-light mt-5">Ver mais</button>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- Div imagem 2 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/frango-banner-cardapio-d.jpg?mtime=20210226103541&focal=none" class="d-block w-100" alt="..."> <!-- Imagem versão desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/frango-banner-cardapio-m.jpg?mtime=20210226103542&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem versão mobile -->
+                    <div class="carousel-caption d-none d-md-block"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel text-light mt-5">Ver mais</button>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- Div imagem 3 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/acompanhamentos-banner-cardapio-d.jpg?mtime=20210226103906&focal=none" class="d-block w-100" alt="..."> <!-- Imagem versão desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/acompanhamentos-banner-cardapio-m.jpg?mtime=20210226103939&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem versão mobile -->
+                    <div class="carousel-caption d-none d-md-block"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel text-light mt-5">Ver mais</button>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- Div imagem 4 -->
+                    <img id="banner" src="https://d3sn2rlrwxy0ce.cloudfront.net/sobremesa-banner-cardapio-d.jpg?mtime=20210226103341&focal=none" class="d-block w-100" alt="..."> <!-- Imagem versão desktop -->
+                    <img id="banner-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/sobremesa-banner-cardapio-m.jpg?mtime=20210226103342&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem versão mobile -->
+                    <div class="carousel-caption d-none d-md-block"> <!-- Botão carrossel -->
+                        <button type="button" class="btn-carousel text-light mt-5">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"> <!-- Seta esquerda carrossel -->
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"> <!-- Seta direita carrossel -->
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Fim do carrossel secundário versão desktop -->
+
+        <!-- Carrossel secundário versão mobile -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-mobile" data-bs-ride="carousel">
+            <div class="carousel-indicators"> <!-- Indicadores -->
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active rounded-circle" style="width: 10px; height: 10px;" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="rounded-circle" style="width: 10px; height: 10px;" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="rounded-circle" style="width: 10px; height: 10px;" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class="rounded-circle" style="width: 10px; height: 10px;" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img id="banner-1" src="https://d3sn2rlrwxy0ce.cloudfront.net/carne-banner-cardapio2-d.jpg?mtime=20210226103612&focal=none" class="w-100" alt="..." media="(min-width: 768px)">
-                    <img id="banner-1-responsive" src="https://d3sn2rlrwxy0ce.cloudfront.net/BK_cheddar_original_750x1150_MOBILE.png?mtime=20220922143828&ampfocal=none" class="w-100" media="(max-width: 767px)">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Ver mais</button>
-                    </div>
+                <div class="carousel-item back-mobile active"> <!-- Div imagem 1 -->
+                    <img id="banner-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/carne-banner-cardapio2-m.jpg?mtime=20210226103619&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem -->
+                    <button type="button" class="btn-carousel button-mobile text-light">Ver mais</button> <!-- Botão carrossel -->
                 </div>
-                <div class="carousel-item">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/frango-banner-cardapio-d.jpg?mtime=20210226103541&focal=none" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Ver mais</button>
-                    </div>
+                <div class="carousel-item back-mobile "> <!-- Div imagem 2 -->
+                    <img id="banner-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/frango-banner-cardapio-m.jpg?mtime=20210226103542&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem -->
+                        <button type="button" class="btn-carousel button-mobile text-light">Ver mais</button> <!-- Botão carrossel -->
                 </div>
-                <div class="carousel-item">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/acompanhamentos-banner-cardapio-d.jpg?mtime=20210226103906&focal=none" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <button type="button" class="btn-carousel text-light mb-4">Ver mais</button>
-                    </div>
+                <div class="carousel-item back-mobile "> <!-- Div imagem 3 -->
+                    <img id="banner-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/acompanhamentos-banner-cardapio-m.jpg?mtime=20210226103939&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem -->
+                        <button type="button" class="btn-carousel button-mobile text-light">Ver mais</button> <!-- Botão carrossel -->
                 </div>
-                <div class="carousel-item">
-                    <img src="https://d3sn2rlrwxy0ce.cloudfront.net/sobremesa-banner-cardapio-d.jpg?mtime=20210226103341&focal=none" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <Ver type="button" class="btn-carousel text-light mb-4">Ver mais</button>
-                    </div>
+                <div class="carousel-item back-mobile "> <!-- Div imagem 4 -->
+                    <img id="banner-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/sobremesa-banner-cardapio-m.jpg?mtime=20210226103342&focal=none" class="w-100" media="(max-width: 767px)"> <!-- Imagem -->
+                    <button type="button" class="btn-carousel button-mobile text-light">Ver mais</button> <!-- Botão carrossel -->
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"> <!-- Seta esquerda -->
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"> <!-- Seta direita -->
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!-- Fim do carrossel secundário versão mobile -->
     </main>
+    <!-- Fim do conteúdo principal -->
 
+    <!-- Navbar versão Mobile -->
+    <div class="footer-mobile fixed-bottom align-items-center" style="background: rgb(245, 235, 220);"> 
+        <ul class="container-fluid m-0 p-2 d-flex align-items-center text-center text-white"> <!-- Lista não ordenada de itens da navbar -->
+            <li class="nav-item">
+                <a href="#"><img class="logo-footer-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/home-ico.svg?mtime=20210211101156&focal=none" alt=""></a>\ <!-- Icones -->
+                <p>Início</p>
+            </li>
+            <li class="nav-item">
+                <a href="#"><img class="logo-footer-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/cupons-ico.svg?mtime=20210211101156&focal=none" alt=""></a> <!-- Icones -->
+                <p>Cupons</p>
+            </li>
+            <li class="nav-item">
+                <a href="#"><img class="logo-footer-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/cardapio-ico.svg?mtime=20210211101155&focal=none" alt=""></a> <!-- Icones -->
+                <p>Cardápio</p>
+            </li>
+            <li class="nav-item">
+                <a href="#"><img class="logo-footer-mobile" src="https://d3sn2rlrwxy0ce.cloudfront.net/lojas-ico.svg?mtime=20210211101157&focal=none" alt=""></a> <!-- Icones -->
+                <p>Restaurantes</p>
+            </li>
+            <li class="nav-item">
+                <!-- Icone menu hamburger -->
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 72 72" 
+                    style=" fill:rgba(80,35,20,.53333);">
+                    <path
+                        d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z">
+                    </path>
+                </svg>
+                <p>Menu</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Fim do navbar versão mobile -->
+
+    <!-- Rodapé principal -->
     <footer class="container-fluid pt-4" style="background-color: rgb(80, 35, 20);">
-        <div class="img-logo-footer text-center">
+        <div class="img-logo-footer text-center"> <!-- Logotipo rodapé -->
             <img src="https://www.burgerking.com.br/images/bklogos/BK-novo-logo-eggwhite.svg" style="width: 82px;" alt="">
         </div>
-        <div class="footer-1">
-            <div class="footer-title justify-content-center d-flex">
-                <ul class="container pt-4 d-inline-block text-center text-white">
+        <div class="footer-1"> <!-- Primeira div do rodapé -->
+            <div class="footer-title justify-content-center d-flex"> <!-- Div dos itens principais do rodapé -->
+                <ul class="container pt-4 d-inline-block text-center text-white"> <!-- Lista dos itens principais do rodapé -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">App BK</a>
                     </li>
@@ -211,8 +301,8 @@
                 </ul>
             </div>
             
-            <div class="footer-subtitle justify-content-center d-flex">
-                <ul class="container d-inline-block text-center text-secondary">
+            <div class="footer-subtitle justify-content-center d-flex"> <!-- Div dos itens secundários do rodapé -->
+                <ul class="container d-inline-block text-center text-secondary"> <!-- Lista dos itens secundários do rodapé -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Diretrizes de Privacidade de Dados</a>
                     </li>
@@ -232,11 +322,11 @@
             </div>
         </div>
         
-        <div class="footer-2 pt-3 align-items-center">
+        <div class="footer-2 pt-3 align-items-center"> <!-- Segunda div do rodapé -->
             <p class="text-center" style="font-size: 1.3rem; color: rgb(245, 235, 220);">Compartilhe algo delicioso</p>
 
-            <div class="rede-sociais-footer justify-content-center d-flex">
-                <ul class="container d-inline-block text-center">
+            <div class="rede-sociais-footer justify-content-center d-flex"> <!-- Ícones de rede sociais -->
+                <ul class="container d-inline-block text-center"> <!-- Lista dos ícones -->
                     <li>
                         <a href="#"><img src="https://d3sn2rlrwxy0ce.cloudfront.net/instagram.png?mtime=20210201115615&focal=none" style="width: 45%;" alt="Logo-Instagram" alt=""></a>
                     </li>
@@ -248,10 +338,16 @@
                     </li>
                 </ul>
             </div>
-            <p class="text-center pt-2 m-0" style="font-size: 0.9rem; font-family: 'Flame-Sans', Helvetica, sans-serif; color: rgb(245, 235, 220); padding-bottom: 5%;">Imagens meramente ilustrativas. Consulte os restaurantes participantes. TM & © 2021 Burger King Corporation. Todos os direitos reservados.</p>
+            <!-- Direitos autorais -->
+            <p class="text-center detal-text pt-2 m-0" style="font-size: 0.9rem; font-family: 'Flame'; color: rgb(245, 235, 220);">Imagens meramente ilustrativas. Consulte os restaurantes participantes. TM & © 2021 Burger King Corporation. Todos os direitos reservados.</p>
+           
+            <!-- Créditos do projeto -->
+            <p class="text-center credits m-0" style="font-size: 0.9rem; font-family: 'Flame'; color: rgb(245, 235, 220);">Projeto criado por: Marcelo Muniz</p>
         </div>
     </footer>
+    <!-- Fim do rodapé principal -->
     
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- Script JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
